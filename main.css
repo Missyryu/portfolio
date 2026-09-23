@@ -10,7 +10,7 @@ html, body {
   align-items: center;
   background-color: #0b0c10; /* Fills empty space if aspect ratio differs */
 
-  animation: fadeIn 0.5s ease-in-out; /*Smooth Fade-in when a page loads*/
+  animation: fadeIn 0.15s ease-in-out; /*Smooth Fade-in when a page loads*/
 }
 @font-face { 
   font-family: 'NaxsoulCather';
