@@ -1,0 +1,758 @@
+/* 0. */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Stops scrollbars from appearing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b0c10; /* Fills empty space if aspect ratio differs */
+
+  animation: fadeIn 0.5s ease-in-out; /*Smooth Fade-in when a page loads*/
+}
+@font-face { 
+  font-family: 'NaxsoulCather';
+  src: url('fonts/NaxrsoulCather-E4PWe.ttf') format('truetype');
+  font-weight: normal; 
+  font-style: normal;
+}
+@font-face { 
+  font-family: 'Chalkduster'; 
+  src: url('fonts/Chalkduster.ttf') format('truetype');
+  font-weight: normal; 
+  font-style: normal;
+}
+@font-face { 
+  font-family: 'CloisterBlack';
+  src: url('fonts/CloisterBlackLight-axjg.ttf') format('truetype');
+  font-weight: normal; 
+  font-style: normal;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+/* SLIDE TRANSITION */
+.slide-stage {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  opacity: 1;
+  transform: translateX(0);
+}
+.slide-stage.slide-out-left {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+.slide-stage.slide-in-right {
+  opacity: 0;
+  transform: translateX(100px);
+}
+/*0.1. Background image settings*/
+.bg { 
+  width: 100%;
+  height: 100%;
+  position: absolute; 
+  top: 50%; 
+  left: 50%;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+  
+  transform: translate(-50%, -50%);
+  scale: calc(min(100vw / 1920, 100vh / 1080));
+  transform-origin: center center;
+  
+  background-image: var(--bg-img);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+} 
+
+/*0.2. Side Nav*/
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 250px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  opacity: 95%;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 50px;
+  border-radius: 1px 5px 95px 1px;
+}
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 40px;
+}
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  opacity: 90%;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 45px;
+}
+.openbtn:hover {
+  background-color:#444;
+  
+}
+
+/*0.2. Return button*/
+.back-button {
+  max-width: 5%;
+  height: auto;
+  left: 1740px; 
+  top: 770px;  
+  position: absolute;
+}
+.back-button img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+.back-button:hover img{
+  transform: scale(1.25); /* Slightly pops out */
+  /*filter: brightness(1.45);*/ /* Brightens image */
+}
+
+/*0.3. Picture Grid*/
+.grid-container { 
+  display: grid;
+  grid-template-columns: 10% 10% 10%;
+}
+
+/*0.4 Scrollable pages
+.scrollable-page {  
+  align-items: flex-start;
+}
+
+.bg-scroll {
+  width: 1900px; 
+  min-height: 1000px; 
+  height: auto !important; 
+  padding-bottom: 100px;
+  
+  margin: 0 auto;
+  transform: scale(calc(100vw / 1920));
+  transform-origin: top center; 
+  
+  background-image: var(--bg-img);
+  background-size: 100% auto; 
+  background-position: top center; 
+  background-repeat: repeat-y; 
+   overflow: auto;
+} */
+
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+
+/* --- LANDING PAGE --- */
+
+/* 1.1. Portfolio title*/
+.title {
+  left: 5px;
+  top: -45px;  
+  padding-top: 10px;
+  max-width: 30%;
+  height: auto;
+  float: left;
+  position: absolute;
+}
+
+/* 1.2. Specific buttons */
+.about-me-container {
+  max-width: 20%;
+  height: auto;
+  left: 720px;
+  top: 59px;
+  position: absolute;
+}
+.about-me-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+.about-me-container:hover img{
+  transform: scale(1.05); /* Slightly pops out */
+  filter: brightness(1.25); /* Brightens image */
+} 
+/* -------------------------------------------------------------------------------------------- */
+.gallery-container {
+  max-width: 45%;
+  height: auto;
+  left: 60px;  
+  top: 525px;      
+  position: absolute;
+}
+.gallery-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+.gallery-container:hover img{
+  transform: scale(1.05); /* Slightly pops out */
+  filter: brightness(1.25); /* Brightens image */
+} 
+/* -------------------------------------------------------------------------------------------- */
+.contact-container {
+  max-width: 15%;
+  height: auto;
+  
+  left: 1440px;  
+  top: 745px;      
+  position: absolute;
+}
+.contact-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+.contact-container:hover img{
+  transform: scale(1.05); /* Slightly pops out */
+  filter: brightness(1.25); /* Brightens image */
+} 
+/* -------------------------------------------------------------------------------------------- */
+.projects-container {
+  max-width: 20%;
+  height: auto;
+  
+  left: 1000px;  
+  top: 290px;      
+  position: absolute;
+}
+.projects-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+.projects-container:hover img{
+  transform: scale(1.05); /* Slightly pops out */
+  filter: brightness(1.25); /* Brightens image */
+} 
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+
+/* --- ABOUT ME PAGE --- */
+
+.clipboard {
+  width: 892.98px;     
+  height: 1192.91px;
+  left: -75px; 
+  top: 59.71px; 
+  position: absolute; 
+  transform: rotate(-13deg); 
+  transform-origin: top left
+}
+.id-card { 
+  width: 717px;
+  height: 422px;
+  left: 1134.44px; 
+  top: 30px; 
+  position: absolute; 
+  
+  transform: rotate(9deg); 
+  transform-origin: top left; 
+  box-shadow: -1px 2px 19.299999237060547px -17px rgba(0, 0, 0, 0.25)
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+
+/* --- GALLERY PAGE --- */
+
+/* 2.1. Gallery tablet */
+.gallery-tablet-container {
+  width: 1400px;
+  height: 1200px;
+  left: 260px;
+  bottom: 220px;
+  position: relative; /* Anchor point for inner absolute elements */
+
+  background-image: url("images/gallery/tablet2.png");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* 2.2. Inner container for your gallery items */
+.tablet-content {
+  position: absolute;
+  top: 440px;    
+  left: 200px;   /* Centers text horizontally inside the screen */
+  width: 1000px; 
+  height: 500px;
+  z-index: 2;   /* Keeps text above all background images */
+  overflow: hidden;
+  border-radius: 20px;
+  
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center; /* Vertical center */
+}
+
+/* 2.3. Glare Overlay - Covers screen exact bounds */
+.tablet-glare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 3; /* Sits above content */
+  pointer-events: none; /* Allows mouse clicks to pass through to content */
+}
+
+/* 2.4. slideshow */
+.slideshow-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*Keeps aspect ratio*/
+  opacity: 0;
+  
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+  border-radius: 20px;
+}
+.slideshow-img.active {
+  opacity: 1; /* Fade-in state */
+  pointer-events: auto;
+} 
+
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+
+/* --- PROJECTS PAGE --- */
+
+/* 3.1. notebook */
+.notebook { 
+  width: 1450px;
+  height: 950px;
+  left: 260px;
+  bottom: 65px;
+  position: relative; /* Anchor point for inner absolute elements */
+
+  background-image: url("images/projects/notebook.png");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+} 
+.notebook-content { 
+  position: absolute;
+  top: 100px;    /* Pushes text down INSIDE the screen */
+  left: 200px;   /* Centers text horizontally inside the screen */
+  width: 1100px; 
+  height: 600px;
+  z-index: 2;   /* Keeps text above all background images */
+  overflow: hidden;
+  border-radius: 20px;
+  
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center; /* Vertical center */
+}
+
+/* 3.2. Post it buttons */
+.TP-postit {
+  max-width: 45%;
+  height: auto;
+  
+  left: 610px; 
+  bottom: 220px;
+  position: absolute;
+}
+.TP-postit img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+.TP-postit:hover img{
+  transform: scale(1.05); /* Slightly pops out */
+  filter:grayscale(0.5)brightness(1.15);
+} 
+/* -------------------------------------------------------------------------------------------- */
+.RB-postit {
+  max-width: 35%;
+  height: auto;
+  
+  left: 30px; 
+  bottom: 20px;
+  position: absolute;
+}
+.RB-postit img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+.RB-postit:hover img{
+  transform: scale(1.05); /* Slightly pops out */
+  filter:grayscale(0.5)brightness(1.15);
+} 
+/* -------------------------------------------------------------------------------------------- */
+.BBM-postit {
+  max-width: 45%;
+  height: auto;
+  
+  left: 50px; 
+  bottom: 280px;
+  position: absolute;
+}
+.BBM-postit img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+.BBM-postit:hover img{
+  transform: scale(1.05); /* Slightly pops out */
+  filter:grayscale(0.5)brightness(1.15);
+} 
+/* -------------------------------------------------------------------------------------------- */
+/* 3.3. Indivitual page settings */
+.projects-grid-container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 80px; 
+  width: 89%; 
+  margin: 0 auto; 
+  padding-top: 5px;
+  align-items: stretch;
+} 
+.page-mini-container {
+  min-height: 8%; 
+  padding: 30px; 
+  box-sizing: border-box;
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 10px;
+}
+.page-mini-container-left {
+  background-image: url('images/projects/frame_small_left.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.page-mini-container-right {
+  background-image: url('images/projects/frame_small_right.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.heading { 
+  width: 100%; 
+  height: 8%; 
+  top: 30px; 
+  position: absolute; 
+  text-align: center; 
+  color: rgb(61, 36, 36); 
+  font-size: 45px; 
+  font-family: 'Chalkduster', fantasy, serif; 
+  font-weight: 400; 
+  word-wrap: break-word;
+}
+.mini-heading { 
+  width: 100%; 
+  height: 30px; 
+  top: 120px; 
+  position: absolute; 
+  text-align: center; 
+  color: rgb(61, 36, 36); 
+  font-size: 20px; 
+  font-family: 'Courier New', monospace; 
+  font-weight: 200; 
+  word-wrap: break-word;
+}
+.info-text { 
+  width: 30%; 
+  height: auto; 
+  left: 15%; 
+  top: 190px; 
+  position: absolute; 
+  text-align:left;
+  line-height: 25px;
+  color: rgb(61, 36, 36); 
+  font-size: 20px; 
+  font-family: Javanese text; 
+  font-weight: 200; 
+  word-wrap: break-word;
+}
+.image-labels {
+  position: absolute; 
+  text-align: center; 
+  font-size: 12px;
+  font-family: 'Courier New', monospace, bold; 
+  font-weight: 200; 
+  word-wrap: break-word;
+}
+
+.link-style {
+  position: absolute; 
+  text-align: center; 
+  font-size: 16px;
+  font-family: 'Courier New', monospace, bold; 
+  font-weight: 200; 
+  word-wrap: break-word;
+  color:rgb(61, 36, 36);
+}
+.link-style:hover {
+  color: #3755c5;
+  transform: scale(1.15); /* Slightly pops out */
+  filter:brightness(1.15);
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* 3.4.1. Back By Monday */
+.BBM-page { 
+  height: auto;
+  min-height: 850px; 
+  padding: 30px; 
+  box-sizing: border-box;
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+  
+}
+.BBM-left {
+  background-image: url('images/projects/BBM/frame_stars_left.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.BBM-right {
+  background-image: url('images/projects/BBM/frame_stars_right.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+} 
+.hover-image-container {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 100px;
+  cursor: pointer;
+}
+.hover-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+}
+.hover-image-container .img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; /* Hidden by default */
+} 
+/* Show hover image and hide base image when hovered */
+.hover-image-container:hover .img-hover {
+  opacity: 1;
+}
+.hover-image-container:hover .img-base {
+  opacity: 0;
+}
+/* -------------------------------------------------------------------------------------------- */
+/* 3.5.1. Rebel Boots */
+.RB-page { 
+  min-height: 850px; 
+  padding: 30px; 
+  box-sizing: border-box;
+  
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+}
+.RB-left {
+  background-image: url('images/projects/RB/frame_academic_left.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.RB-right {
+  background-image: url('images/projects/RB/frame_academic_right.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+/* -------------------------------------------------------------------------------------------- */
+/* 3.6.1. TrashPanda */
+.TP-page { 
+  min-height: 850px; 
+  padding: 30px; 
+  box-sizing: border-box;
+  
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+}
+.TP-left {
+  background-image: url('images/projects/TP/frame_beads_left.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.TP-right {
+  background-image: url('images/projects/TP/frame_beads_right.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+/* -------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+
+/* --- CONTACT PAGE --- */
+
+/* 4.1. Images */
+.message-bubble-up {
+  width: 800px; 
+  height: 300px; 
+  padding-top: 60px; 
+  padding-bottom: 7px; 
+  padding-left: 13px; 
+  padding-right: 13px; 
+  left: 100px; 
+  position: relative;
+  
+  background-image: url("images/contact/text_bubble1.png");
+  background-position: center;
+  background-size: 90% 160%;
+  background-repeat: no-repeat;
+  
+  font-size: 62px; 
+  font-family: Jaini Purva;
+  /*font-weight: 400; */
+  line-height: 65px; 
+  word-wrap: break-word;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+}
+.message-bubble-down {
+  width: 800px; 
+  height: 400px; 
+  left:60px;
+  position: relative; 
+  display: flex;
+  flex-direction: column;
+  
+  background-image: url("images/contact/text_bubble2.png");
+  background-position: center;
+  background-size: 120% 150%;
+  background-repeat: no-repeat;
+  
+  padding-left: 200px;
+  padding-top: 100px;
+  line-height: 50px; 
+  word-wrap: break-word;
+  text-align: left;
+  font-size: 35px;
+  font-family: Javanese Text;
+  color: white;
+}
+
+/* 4.1. Text containers */
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.some-icon {
+  width: 35px;
+  height: 30px;
+  object-fit: contain;
+}
+.phone-call-container {
+  width: 600px; 
+  height: 800px; 
+  padding-top: 6px; 
+  padding-bottom: 7px; 
+  padding-left: 13px; 
+  padding-right: 13px; 
+  left: 990px;
+  bottom: 400px;
+  position: relative;
+
+  background-image: url("images/contact/phone%20call.gif");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.contact-link:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+.contact-link:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+.contact-link:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.contact-link:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}

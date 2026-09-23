@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Mis Ery</title>
+  
+  <!-- Link your CSS file here -->
+  <link rel="stylesheet" href="main.css">
+</head>
+<body data-next-page="BBM_3.html" data-prev-page="BBM_1.html">
+  <div class="slide-stage">
+  <div class="bg" style="--bg-img: url('background_page.png');">
+    <!-- SideBar  here -->
+    <div id="mySidepanel" class="sidepanel"> 
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="Index.html">Main page</a>
+      <a href="About_me.html">About Me</a> 
+      <a href="Projects.html">Projects</a>
+      <a href="Gallery.html">Gallery</a> 
+      <a href="Contact.html">Contact</a>
+    </div> 
+    <button class="openbtn" onclick="openNav()">☰</button>  
+   <!-- ------ -->
+   <div class="projects-grid-container">
+     <img src="images/projects/arrow_left.gif" style=" width: 5%; position: absolute;top: 2%;">
+     <!-- LEFT PAGE -->
+      <div class="BBM-page BBM-left">
+        <p class="heading">Side characters</p>
+        <p class="info-text" style="width:70%;">Nilo's story:
+        <br/>There are two main side characters: Jenna and Henna
+        <br/> They have more expressions since their part in the story is bigger than most. 
+        <br/>
+        <br/>Other side characters get only one sprite per character.</p>
+        <img src="images/projects/BBM/characters/Jenna%20ja%20Henna.png" style="width: 98%; position: absolute; top:47%; left:5%;">
+      </div>
+     
+     <img src="images/projects/arrow_right.gif" style=" width: 5%; position: absolute; left: 90%;top: 2%;">
+     <!-- RIGHT PAGE -->
+      <div class="BBM-page BBM-right">
+        <img src="images/projects/BBM/characters/side%20characters.png" style="width: 80%; position: absolute; left:5%;">
+        <p class="mini-heading" style="width: 200px; font-size: 14px; top:4%; left: 5%;">1 sprite characters</p>
+        <img src="images/projects/BBM/characters/monsters_1.png" style="width: 35%; position: absolute; left:5%; top: 41%">
+        <img src="images/projects/BBM/characters/monsters_2.png" style="width: 42%; position: absolute; left:45%; top:57%">
+        <p class="info-text" style="width: 50%; top:43%; left: 40%;">Mina's side:
+        <br/> There are not really 'side characters' in her side of the story. There are these creatures in some of the backgrounds like the town people.</p>
+      </div>
+    <!-- 
+     <div class="back-button" style="left: 1790px; top: 830px;">
+        <a href="Projects.html">
+        <img style="width: 70px; height: 90px;" src="images/icon_back.png"/>
+        </a>
+      </div>
+-->
+    </div>
+    </div>
+    </div>
+    
+<!--___________________________________________________________________ -->
+<script src="main.js"></script>
+
+  <script>
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+    </script>
+</body>
+</html>

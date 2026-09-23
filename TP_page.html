@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Mis Ery</title>
+  
+  <!-- Link your CSS file here -->
+  <link rel="stylesheet" href="main.css">
+</head>
+  
+<body data-next-page="TP_1.html">
+  <div class="bg" style="--bg-img: url('background_page.png')">
+    <!-- SideBar  here -->
+    <div id="mySidepanel" class="sidepanel"> 
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="Index.html">Main page</a>
+      <a href="About_me.html">About Me</a> 
+      <a href="Projects.html">Projects</a>
+      <a href="Gallery.html">Gallery</a> 
+      <a href="Contact.html">Contact</a>
+    </div> 
+    <button class="openbtn" onclick="openNav()">☰</button>  
+   <!-- ------ -->
+     <div class="projects-grid-container">
+     <!-- LEFT PAGE -->
+     <div class="TP-page TP-left">
+       <p class="heading">Sparkler -project</p>
+       <p class=mini-heading>Game project by Team TrashPanda</p>
+       <p class="info-text"> Role in project:<br/>Graphics Lead<br/><br/>Status:<br/>On-going<br/>2026 -</p>
+       <img src="images/projects/TP/team-sketch.jpg" style="position: absolute; width: 70%; left: 15%; top:50%; border-radius: 30px;">
+       <img src="images/projects/TP/trashpanda-001.png" style="position: absolute; width: 20%; left: 65%; top: 25%; filter: drop-shadow(2px 2px 3px)">
+       <p class="image-labels" style="position: absolute; top: 91%; left: 16%;">Team composition</p>
+     </div> 
+       <img src="images/projects/arrow_right.gif" style=" width: 5%; position: absolute; left: 90%;top: 2%;">
+     <!-- RIGHT PAGE -->
+     <div class="TP-page TP-right">
+       <img src="images/projects/TP/character/Sparkler.png" style="position: absolute; width: 40%; left:12%; top:8%;">
+       <img src="images/projects/TP/character/trembler.png" style="position: absolute; width: 42%; left:49%; top:6%;">
+       <img src="images/projects/TP/konsepti_blur.png" style="position: absolute; width: 70%; top: 50%; left: 15%;">
+       <p class="image-labels" style="position: absolute; top: 88%; left: 15%;">Game art consepts</p>
+       </div>
+       <!--
+       <div class="back-button" style="left: 1770px; top: 840px;">
+        <a href="Projects.html">
+          <img style="width: 70px; height: 90px;" src="images/icon_back.png"/>
+        </a>
+      </div> -->
+    </div>
+</div>
+<!--___________________________________________________________________ -->
+  <script src="main.js"></script> 
+  <script>
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+    </script>
+</body>
+</html>

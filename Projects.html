@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Mis Ery</title>
+  
+  <!-- Link your CSS file here -->
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  
+  <div class="bg" style="--bg-img: url('background_desk.png')">
+     <!-- SideBar  here -->
+    <div id="mySidepanel" class="sidepanel"> 
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="Index.html">Main page</a>
+      <a href="About_me.html">About Me</a> 
+      <a href="Projects.html">Projects</a>
+      <a href="Gallery.html">Gallery</a> 
+      <a href="Contact.html">Contact</a>
+    </div> 
+    <button class="openbtn" onclick="openNav()">☰</button>  
+   <!-- ------ -->
+    <div class="notebook"> 
+      <div class="notebook-content"> 
+        <div class="BBM-postit" style=" width:400px; height:300px">
+          <a href="BBM_page.html">
+          <img src="images/projects/BBM_postit_text.png" alt="Post it"/>
+          </a>
+        </div>
+        <div class="RB-postit" style=" width:400px; height:300px">
+          <a href="RB_page.html">
+          <img src="images/projects/RB_postit_text.png" alt="Post it"/>
+          </a>
+        </div>
+        <div class="TP-postit" style=" width:400px; height:300px">
+          <a href="TP_page.html">
+          <img src="images/projects/TP_postit_text.png" alt="Post it">
+          </a>
+        </div>
+      </div>
+      <!--<img style="width: auto; height: 1000px; left: -62px; top: -72px; position: absolute" src="images/projects/notebook.png" />-->
+    </div>
+    
+  <div class="back-button">
+    <a href="Index.html">
+      <img style="width: 100px; height: 130px;" src="images/icon_back.png"/>
+    </a>
+    </div>
+  </div>
+<!--___________________________________________________________________ -->
+  <script>
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+    </script>
+</body>
+</html>

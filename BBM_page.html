@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Mis Ery</title>
+  
+  <!-- Link your CSS file here -->
+  <link rel="stylesheet" href="main.css">
+</head>
+<body data-next-page="BBM_1.html">
+  <div class="slide-stage">
+    <div class="bg" style="--bg-img: url('background_page.png');">
+    <!-- SideBar  here -->
+    <div id="mySidepanel" class="sidepanel"> 
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="Index.html">Main page</a>
+      <a href="About_me.html">About Me</a> 
+      <a href="Projects.html">Projects</a>
+      <a href="Gallery.html">Gallery</a> 
+      <a href="Contact.html">Contact</a>
+    </div> 
+    <button class="openbtn" onclick="openNav()">☰</button>  
+   <!-- ------ -->
+  
+    <div class="projects-grid-container">
+     <!-- LEFT PAGE -->
+     <div class="BBM-page BBM-left">
+       <p class="heading">Back By Monday</p>
+       <p class=mini-heading>Visual Novel</p>
+       <p class="info-text"> Role in project:<br/>Indie developer<br/><br/>Status:<br/>Complete<br/>2024</p>
+       <div class="page-mini-container-left" style="width: 99%; height: 400px; top: 45%; left: 5%; position: absolute;  background-image: url('images/projects/BBM/pelin_tausta.png');"> 
+        <div style="width: 15%; height: 90%; position: absolute; top: 5%; left: 7%; opacity: 45%; background-color:azure; border-radius: 20px;"></div>
+        <p class="mini-heading" style="width: 15%; color: black; font-size: 11px; top: 7%; left: 7%;"> Hover over here:</p>
+        <div class="hover-image-container" style="width: 80px; height: 50px; position: absolute; left:9%; top: 70px;"> 
+         <img src="images/projects/BBM/buttons/start_idle.png" class="img-base" alt="s-idle">
+         <img src="images/projects/BBM/buttons/start_hover.png" class="img-hover" alt="s-hover">
+        </div>
+        <div class="hover-image-container" style="width: 110px; height: 50px; position: absolute; left:9%; top: 120px;"> 
+         <img src="images/projects/BBM/buttons/continue_idle.png" class="img-base" alt="c-idle">
+         <img src="images/projects/BBM/buttons/continue_hover.png" class="img-hover" alt="c-hover">
+       </div>
+        <div class="hover-image-container" style="width: 80px; height: 50px; position: absolute; left:9%; top: 160px;"> 
+         <img src="images/projects/BBM/buttons/load_idle.png" class="img-base" alt="l-idle">
+         <img src="images/projects/BBM/buttons/load_hover.png" class="img-hover" alt="l-hover">
+       </div>
+        <div class="hover-image-container" style="width: 80px; height: 50px; position: absolute; left:9%; top: 210px;"> 
+         <img src="images/projects/BBM/buttons/options_idle.png" class="img-base" alt="o-idle">
+         <img src="images/projects/BBM/buttons/options_hover.png" class="img-hover" alt="o-hover">
+       </div>
+        <div class="hover-image-container" style="width: 80px; height: 50px; position: absolute; left:9%; top: 260px;"> 
+         <img src="images/projects/BBM/buttons/credits_idle.png" class="img-base" alt="cr-idle">
+         <img src="images/projects/BBM/buttons/credits_hover.png" class="img-hover" alt="cr-hover">
+       </div>
+        <div class="hover-image-container" style="width: 80px; height: 50px; position: absolute; left:9%; top: 300px;"> 
+         <img src="images/projects/BBM/buttons/quit_idle.png" class="img-base" alt="q-idle">
+         <img src="images/projects/BBM/buttons/quit_hover.png" class="img-hover" alt="q-hover">
+       </div>
+       </div>
+     </div> 
+      <img src="images/projects/arrow_right.gif" style=" width: 5%; position: absolute; left: 90%;top: 2%;">
+     <!-- RIGHT PAGE -->
+     <div class="BBM-page BBM-right">
+      <p class="info-text" style="width: 300px; height: auto; position: absolute; left: 90px; top: 40px;">This visual novel was my "passion project" and I used it in my thesis for school as well. I had a story in mind, characters designed and I decided to make it to a game.
+        <br/>I used RenPy engine and python to make it.
+       <br/><br/>In the end, prologue and 1st chapter was released and then I put it on hold. So I can focus to other things. But I know I still have lot of this in case I want to pursue it in the future.</p>
+       <div style="top:140px; left:450px; position: absolute;">
+         <img src="images/projects/BBM/window_icon.png" style="width: 200px;">
+       </div>
+       <div style="top:45%; left: 4%; position: absolute;">
+         <img src="images/projects/BBM/UI.png" style="width: 750px;">
+       </div>
+     </div>
+      <!--
+     <div class="back-button" style="left: 1790px; top: 830px;">
+        <a href="Projects.html">
+        <img style="width: 70px; height: 90px;" src="images/icon_back.png"/>
+        </a>
+      </div>
+    </div>
+    
+
+
+  </div> -->
+  </div>
+</div>
+
+<!--___________________________________________________________________ --> 
+<script src="main.js"></script>
+
+  <script>
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+    </script>
+</body>
+</html>

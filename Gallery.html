@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Mis Ery</title>
+  
+  <!-- Link your CSS file here -->
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <!-- SideBar  here -->
+  <div class="bg" style="--bg-img: url('background_desk.png')">
+    <div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="Index.html">Main page</a>
+  <a href="About_me.html">About Me</a>
+  <a href="Projects.html">Projects</a>
+  <a href="Gallery.html">Gallery</a>
+  <a href="Contact.html">Contact</a>
+</div>
+<button class="openbtn" onclick="openNav()">☰</button>  
+   <!-- ------ -->
+    <div class="gallery-tablet-container">
+      <div class="tablet-content">
+        
+          <!-- <p style="font-size: 32px; color: black; font-weight: bold;"> Hello!</p>-->
+        <img class="slideshow-img active" src="images/gallery/carousel/dear.png">
+        <img class="slideshow-img" src="images/gallery/carousel/halo.png">
+        <img class="slideshow-img" src="images/gallery/carousel/camera_girl.png">
+        <img class="slideshow-img" src="images/gallery/carousel/dangan.png">
+        <img class="slideshow-img" src="images/gallery/carousel/kitty.png">
+        <img class="slideshow-img" src="images/gallery/carousel/bunny.png">
+        <img class="slideshow-img" src="images/gallery/carousel/dogy.png">
+        <img class="slideshow-img" src="images/gallery/carousel/bruno.png">
+        <img class="slideshow-img" src="images/gallery/carousel/forest.png">
+        <img class="slideshow-img" src="images/gallery/carousel/pond_2.png">
+        <img class="slideshow-img" src="images/gallery/carousel/tytti.png">
+        <img class="slideshow-img" src="images/gallery/carousel/pretty.png">
+        <img class="slideshow-img" src="images/gallery/carousel/ryder.png">
+        <img class="slideshow-img" src="images/gallery/carousel/velyssa.png">
+        <img class="slideshow-img" src="images/gallery/carousel/sereth_sheet.png">
+        <img class="slideshow-img" src="images/gallery/carousel/Ygor2.png">
+      </div>
+      <img src="images/gallery/tablet_glare2.png" class="tablet-glare" alt="glare?">
+    </div>
+    
+    <div class="back-button">
+      <a href="Index.html">
+      <img style="width: 100px; height: 130px;" src="images/icon_back.png"/>
+      </a>
+    </div>
+</div>
+<!--___________________________________________________________________ -->
+<script>
+  const images = document.querySelectorAll('.slideshow-img');
+  let currentIndex = 0;
+
+  setInterval(() => {
+    // 1. Fade out current image
+    images[currentIndex].classList.remove('active');
+
+    // 2. Wait 1 second (duration of CSS fade-out) before showing next image
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add('active'); // Fade in next image
+    }, 1000); 
+
+  }, 4000); // Total cycle time per image (Display time + Fade time)
+  
+  function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+</body>
+</html>

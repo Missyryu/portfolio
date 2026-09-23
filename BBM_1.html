@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Mis Ery</title>
+  
+  <!-- Link your CSS file here -->
+  <link rel="stylesheet" href="main.css">
+</head>
+<body data-next-page="BBM_2.html" data-prev-page="BBM_page.html">
+  <div class="slide-stage">
+  <div class="bg" style="--bg-img: url('background_page.png');">
+    <!-- SideBar  here -->
+    <div id="mySidepanel" class="sidepanel"> 
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="Index.html">Main page</a>
+      <a href="About_me.html">About Me</a> 
+      <a href="Projects.html">Projects</a>
+      <a href="Gallery.html">Gallery</a> 
+      <a href="Contact.html">Contact</a>
+    </div> 
+    <button class="openbtn" onclick="openNav()">☰</button>  
+   <!-- ------ -->
+   <div class="projects-grid-container">
+     <img src="images/projects/arrow_left.gif" style=" width: 5%; position: absolute;top: 2%;">
+     <!-- LEFT PAGE -->
+      <div class="BBM-page BBM-left">
+        <p class="heading">Characters</p>
+        <p class="info-text" style="width: 60%;">The game has two main characters. Older brother and sister that you take turns to play as.
+        <br/>These characters are Nilo and Mina.</p>
+        <p class="info-text" style="width: 45%; top:35%;">Nilo's side of the story takes place in town and is more sociable. Most side characters appear there. 
+        <br/>There is also "placeholder people" I made to certain sprites on the background just to make the town feel more lively.</p>
+        <img src="images/projects/BBM/characters/bg%20characters.png" style="width:90%; position:absolute; bottom:5%; left:5%;">
+      </div>
+     
+     
+     
+      <img src="images/projects/arrow_right.gif" style=" width: 5%; position: absolute; left: 90%;top: 2%;">
+     <!-- RIGHT PAGE -->
+      <div class="BBM-page BBM-right">
+        <img src="images/projects/BBM/characters/Nilo.png" style="width: 85%; position: absolute; top:5%; left:5%;">
+        <img src="images/projects/BBM/characters/nilo%20calm.png" style="width: 20%; position: absolute; top:5%; left:65%;">
+        <img src="images/projects/BBM/characters/Mina.png" style="width: 85%; position: absolute; top:50%; left:5%;">
+        <img src="images/projects/BBM/characters/mina%20smile.png" style="width: 18%; position: absolute; top:50%; left:65%;">
+      </div>
+    <!--
+     <div class="back-button" style="left: 1790px; top: 830px;">
+        <a href="Projects.html">
+        <img style="width: 70px; height: 90px;" src="images/icon_back.png"/>
+        </a>
+      </div>
+ -->
+    </div>
+    </div>
+    </div>
+    <!--
+
+
+  </div> -->
+<!--___________________________________________________________________ -->
+<script src="main.js"></script>
+
+  <script>
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Mis Ery</title>
+  
+  <!-- Link your CSS file here -->
+  <link rel="stylesheet" href="main.css">
+</head>
+<body data-next-page="TP_2.html" data-prev-page="TP_page.html">
+
+  <div class="bg" style="--bg-img: url('background_page.png')">
+    <!-- SideBar  here -->
+    <div id="mySidepanel" class="sidepanel"> 
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="Index.html">Main page</a>
+      <a href="About_me.html">About Me</a> 
+      <a href="Projects.html">Projects</a>
+      <a href="Gallery.html">Gallery</a> 
+      <a href="Contact.html">Contact</a>
+    </div> 
+    <button class="openbtn" onclick="openNav()">☰</button>  
+   <!-- ------ -->
+     <div class="projects-grid-container">
+       <img src="images/projects/arrow_left.gif" style=" width: 5%; position: absolute;top: 2%;">
+     <!-- LEFT PAGE -->
+     <div class="TP-page TP-left">
+       <p class="heading">Character</p>
+       <p class=mini-heading>The Sparkler</p>
+       <img src="images/projects/TP/character/sparkler-face.png" style="position: absolute; width: 30%; left: 58%; top: 22%;">
+       <p class="info-text" style="position: absolute; width: 40%;">The character is based on one of the teams members RP-character. Sparkler is a silly little mischievous raccoon that causes chaos.
+       <br/> 
+       <br/>In the game, player gets to play as Sparkler and tries to escape the mansion. 
+       <br/>There are not many instructions, which plays both on the difficulty level, and characters personality.</p>
+       <img src="images/projects/TP/sketch_coon.jpg" style="position: absolute; width: 50%; top: 59%; left:13%;"> 
+       <img src="images/projects/TP/roll2.jpg" style="position: absolute; width: 20%; top: 60%; left: 66%;">
+       </div> 
+       <img src="images/projects/arrow_right.gif" style=" width: 5%; position: absolute; left: 90%;top: 2%;">
+     <!-- RIGHT PAGE -->
+     <div class="TP-page TP-right">
+      <img src="images/projects/TP/character/sketch.gif" style="position: absolute; width: 27%; left: 15%; top:6%;">
+      <img src="images/projects/TP/character/animations.gif" style="position: absolute; width: 48%; left: 44%; top:6%;">
+      <img src="images/projects/TP/character/Roll.png" style="position: absolute; width: 17%; left: 15%; top:52%;">
+      <img src="images/projects/TP/character/movement_roll.gif" style="position: absolute; width: 24%; left: 23%; top:56%;">
+      <p class="image-labels" style="left: 20%; top: 5%;">Early animations</p>
+      <p class="info-text" style="top: 70%;">The character has sets of animations; idle and movement. 
+       <br/>in this time the game has these animations and a roll for another game mechanic.</p>
+     </div>
+       <!--
+       <div class="back-button" style="left: 1770px; top: 840px;">
+        <a href="Projects.html">
+          <img style="width: 70px; height: 90px;" src="images/icon_back.png"/>
+        </a> 
+      </div> -->
+    </div>
+ 
+</div>
+<!--___________________________________________________________________ -->
+<script src="main.js"></script>
+
+  <script>
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+    </script>
+</body>
+</html>

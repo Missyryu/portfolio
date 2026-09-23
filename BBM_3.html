@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Mis Ery</title>
+  
+  <!-- Link your CSS file here -->
+  <link rel="stylesheet" href="main.css">
+</head>
+<body data-prev-page="BBM_2.html">
+  <div class="slide-stage">
+  <div class="bg" style="--bg-img: url('background_page.png');">
+    <!-- SideBar  here -->
+    <div id="mySidepanel" class="sidepanel"> 
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="Index.html">Main page</a>
+      <a href="About_me.html">About Me</a> 
+      <a href="Projects.html">Projects</a>
+      <a href="Gallery.html">Gallery</a> 
+      <a href="Contact.html">Contact</a>
+    </div> 
+    <button class="openbtn" onclick="openNav()">☰</button>  
+   <!-- ------ -->
+   <div class="projects-grid-container">
+     <img src="images/projects/arrow_left.gif" style=" width: 5%; position: absolute;top: 2%;">
+     <!-- LEFT PAGE -->
+      <div class="BBM-page BBM-left">
+        <p class="heading">Backgrounds</p>
+        
+        <div class="tablet-content" style="width:85%; height:42%; position: absolute; left:7%; top:25%;">
+          <img class="slideshow-img active" src="images/projects/BBM/background/home/nilos_room.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/home/nilos_room_night.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/home/downstairs.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/home/downstairs_night.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/home/Kitchen.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/home/Kitchen_night.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/home/livingroom.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/home/Kitchen_night.png">
+          
+          <img class="slideshow-img" src="images/projects/BBM/background/forest/forest_1_day.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/forest/forest_1_night.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/forest/forest_2_day.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/forest/forest_2_night_eva.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/forest/pond_day.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/forest/pond_night_amalia.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/forest/treeshack_day.png"> 
+          <img class="slideshow-img" src="images/projects/BBM/background/forest/treeshack_night_mielikki.png">
+          
+          <img class="slideshow-img" src="images/projects/BBM/background/city/town_day.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/city/town_day_extras.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/city/town_night.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/city/park_day.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/city/park_night.png"> 
+          <img class="slideshow-img" src="images/projects/BBM/background/city/library_door_day.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/city/library_door_night.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/city/library_day.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/city/library_day_extras.png">
+          <img class="slideshow-img" src="images/projects/BBM/background/city/library_night.png">
+        </div>
+        <p class="info-text" style="width: 60%; top:70%;">I modeled these backgrounds and drew them for the visual novel.
+        <br/>I considered using free ready assets from itch.io, however none of them fit for my purposes. I wasn't perfectly happy for how they turned out, and have decided to practice more scenes and backgrounds since.</p>
+      </div>
+     <!-- RIGHT PAGE -->
+      <div class="BBM-page BBM-right">
+        <p class="info-text" style="width: 60%; top:8%; left:10%;">There were few playable scenes:</p>
+        <img src="images/projects/BBM/playable/pond.gif" style="width:70%; position:absolute; top:15%; left:10%;"> 
+        <img src="images/projects/BBM/playable/deadend.gif" style="width:70%; position:absolute; top:55%; left:10%;">
+      </div>
+    
+     <div class="back-button" style="left: 1790px; top: 830px;">
+        <a href="Projects.html">
+        <img style="width: 70px; height: 90px;" src="images/icon_back.png"/>
+        </a>
+      </div>
+    </div>
+    </div>
+    </div>
+    <!--
+
+
+  </div> -->
+<!--___________________________________________________________________ -->
+<script src="main.js"></script>
+
+  <script>
+    const images = document.querySelectorAll('.slideshow-img');
+  let currentIndex = 0;
+
+  setInterval(() => {
+    // 1. Fade out current image
+    images[currentIndex].classList.remove('active');
+
+    // 2. Wait 1 second (duration of CSS fade-out) before showing next image
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add('active'); // Fade in next image
+    }, 1000); 
+
+  }, 4000); // Total cycle time per image (Display time + Fade time)
+  
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+    </script>
+</body>
+</html>

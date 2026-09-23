@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Mis Ery</title>
+  
+  <!-- Link your CSS file here -->
+  <link rel="stylesheet" href="main.css">
+</head>
+  
+<body>
+  <div class="bg" style="--bg-img: url('background_page.png')">
+    <!-- SideBar  here -->
+    <div id="mySidepanel" class="sidepanel"> 
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="Index.html">Main page</a>
+      <a href="About_me.html">About Me</a> 
+      <a href="Projects.html">Projects</a>
+      <a href="Gallery.html">Gallery</a> 
+      <a href="Contact.html">Contact</a>
+    </div> 
+    <button class="openbtn" onclick="openNav()">☰</button>  
+   <!-- ------ -->
+    <div class="projects-grid-container">
+     <!-- LEFT PAGE -->
+     <div class="RB-page RB-left">
+       <p class="heading">Rebel Boots</p>
+       <p class=mini-heading>Website</p>
+       <p class="info-text"> Role in project:<br/>Web Design<br/><br/>Status:<br/>On-going<br/>2019 -</p>
+       <div class="page-mini-container-left" style="width: 640px; height: 400px; top: 400px; left: 99px; position: absolute;">
+       <div style="top:70px; left:80px; position: absolute;">
+         <img src="images/projects/RB/flyers.png" style="width: 260px;">
+       </div>
+       <p class="image-labels" style="top: 350px; left: 110px;">Flyers for events</p>
+       <div style="top:70px; left:350px; position: absolute;">
+         <img src="images/projects/RB/logo_musta.png" style="width: 200px;">
+       </div>
+       <div style="top:190px; left:350px; position: absolute;">
+         <img src="images/projects/RB/logo_valkoinen_ISO.png" style="width: 200px;">
+       </div>
+       <p class="image-labels" style="top: 350px; left: 380px;">Logo in two colors</p>
+       </div>
+     </div> 
+     <!-- RIGHT PAGE -->
+     <div class="RB-page RB-right">
+       <div style="top:40px; left:180px; position: absolute;">
+         <img src="images/projects/RB/sitecode.png" style="width:450px;border-radius:10px;">
+       </div>
+       <p class="info-text" style="top:595px; left:150px; width: 550px;">Website www.rebelboots.fi is created for the dance group located in Jyväskylä Finland. I made the website and logo design for them as pro bono work, since I know the founders, and am part of the group.<br/>
+       I still work for them as assistant in events and do occasional design work for them.<br/> Check them out here:</p>
+       <a class="link-style" style="top:765px; left:350px;" href="https://www.rebelboots.fi/" target="_blank">rebelboots.fi</a>
+      </div>
+      
+      <div class="back-button" style="left: 1770px; top: 840px;">
+        <a href="Projects.html">
+          <img style="width: 70px; height: 90px;" src="images/icon_back.png"/>
+        </a>
+      </div>
+    </div>
+</div>
+
+<!--___________________________________________________________________ -->
+  <script>
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+    </script>
+</body>
+</html>
