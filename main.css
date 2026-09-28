@@ -184,10 +184,9 @@ html, body {
 
 /* 1.1. Portfolio title*/
 .title {
-  left: 5px;
-  top: -45px;  
-  padding-top: 10px;
-  max-width: 30%;
+  left: 1%;
+  top: -7%;  
+  max-width: 35%;
   height: auto;
   float: left;
   position: absolute;
@@ -197,8 +196,8 @@ html, body {
 .about-me-container {
   max-width: 20%;
   height: auto;
-  left: 720px;
-  top: 59px;
+  left: 40%;
+  top: 9%;
   position: absolute;
 }
 .about-me-container img {
@@ -215,10 +214,10 @@ html, body {
 } 
 /* -------------------------------------------------------------------------------------------- */
 .gallery-container {
-  max-width: 45%;
+  max-width: 40%;
   height: auto;
-  left: 60px;  
-  top: 525px;      
+  left: 3%;  
+  top: 59%;      
   position: absolute;
 }
 .gallery-container img {
@@ -235,11 +234,11 @@ html, body {
 } 
 /* -------------------------------------------------------------------------------------------- */
 .contact-container {
-  max-width: 15%;
+  max-width: 14%;
   height: auto;
   
-  left: 1440px;  
-  top: 745px;      
+  left: 80%;  
+  top: 80%;      
   position: absolute;
 }
 .contact-container img {
@@ -256,11 +255,11 @@ html, body {
 } 
 /* -------------------------------------------------------------------------------------------- */
 .projects-container {
-  max-width: 20%;
+  max-width: 19%;
   height: auto;
   
-  left: 1000px;  
-  top: 290px;      
+  left: 53%;  
+  top: 32%;      
   position: absolute;
 }
 .projects-container img {
